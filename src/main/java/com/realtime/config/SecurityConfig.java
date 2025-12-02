@@ -13,6 +13,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 import java.util.List;
 
+// implementation http basic to security filter chain
 @Configuration
 public class SecurityConfig {
     @Bean

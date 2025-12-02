@@ -5,6 +5,8 @@ import org.springframework.security.core.userdetails.User;
 
 import java.util.Collection;
 
+
+// for adding "id" field to authentication context
 public class CustomUserDetails extends User {
 
     private final Long id;

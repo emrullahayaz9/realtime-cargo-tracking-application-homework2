@@ -4,6 +4,7 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+// dto for location create response
 @Data
 @Builder
 @Getter

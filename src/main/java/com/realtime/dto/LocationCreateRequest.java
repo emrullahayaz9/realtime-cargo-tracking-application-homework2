@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
+// dto for location create request
 @Data
 @Builder
 @Getter
