@@ -1,14 +1,14 @@
 # Realtime Cargo Tracking System (Backend)
 
-* This is the backend service for the Realtime Cargo Tracking application. It is built with **Spring Boot** and uses **Apache Kafka** for high-throughput event streaming, **PostgreSQL** for data persistence, and **WebSockets** (STOMP) to push realtime location updates to the frontend.
+* This is the backend service for the Realtime Cargo Tracking application. It is built with **Spring Boot** and uses **Apache Kafka** for high-throughput event streaming, **PostgreSQL** for data persistence, and **WebSockets** to push realtime location updates to the frontend.
 
 ## Tech Stack
 
-* **Java 17+** (Spring Boot 3.x)
+* **Java 21+** (Spring Boot 3.5.8)
 * **PostgreSQL** (Relational Database)
 * **Apache Kafka** (Event Streaming)
-* **Docker & Docker Compose** (Containerization for Kafka)
-* **WebSocket / STOMP** (Realtime Communication)
+* **Docker & Docker Compose** (Containerization for Kafka, and Grafana)
+* **WebSocket** (Realtime Communication)
 
 ---
 
@@ -62,3 +62,18 @@ docker-compose up -d
 Verify: Ensure that the containers are running (docker ps). Kafka runs on port 9092.
 
 4. Run the Application
+
+Note:
+If you want to run the simulation together with the frontend, please visit:
+
+ https://github.com/emrullahayaz9/cargo-frontend
+
+After cloning this repository, create the following three cargo entries in the database:
+
+ID: 1 — Tracking Number: TR-CC107DD8
+
+ID: 2 — Tracking Number: TR-C90B1A00
+
+ID: 3 — Tracking Number: TR-3C9115EA
+
+Once these cargo records are created, the frontend will display real-time location updates produced by the backend simulation.
